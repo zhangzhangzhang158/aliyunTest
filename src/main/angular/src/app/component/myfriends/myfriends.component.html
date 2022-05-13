@@ -1,0 +1,26 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-5">
+      <div class="panel panel-success">
+        <div class="panel-heading">
+          <h3 class="panel-title">我的好友</h3>
+        </div>
+        <div class="panel-body">
+          <ul class="list-group">
+            <li class="list-group-item" *ngFor="let user of users">
+              <span>
+                <a [routerLink]="['/chatRoom',user.username]" routerLinkActive="active">
+                  {{user.username}} 
+                </a>
+                <a href="mailto: {{user.email}}">
+                    {{user.email}}
+                  </a>
+              </span>
+            </li>
+          </ul>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+</div>
